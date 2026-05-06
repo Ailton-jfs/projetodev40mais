@@ -1,0 +1,283 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* PALETA */
+:root {
+    --cor1: #140C30;
+    --cor2: #14253E;
+    --cor3: #153D4C;
+    --cor4: #15565B;
+    --cor5: #156F69;
+    --cor6: #168777;
+    --cor7: #16A085;
+}
+
+/* BODY */
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--cor1);
+    color: white;
+    line-height: 1.6;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: var(--cor2);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: var(--cor7);
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+    background: linear-gradient(180deg, var(--cor1), var(--cor3));
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #cbd5e1;
+}
+
+/* BOTÕES */
+.buttons button {
+    padding: 12px 25px;
+    margin: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.buttons button {
+    background: var(--cor7);
+    color: white;
+}
+
+.buttons button:hover {
+    transform: scale(1.05);
+    background: var(--cor6);
+}
+
+.secondary {
+    background: var(--cor4);
+}
+
+.secondary:hover {
+    background: var(--cor5);
+}
+
+/* SEÇÕES */
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+section p {
+    max-width: 700px;
+    margin: auto;
+    color: #d1d5db;
+}
+
+/* EVENTOS */
+.cards {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: var(--cor3);
+    padding: 30px;
+    border-radius: 10px;
+    width: 250px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    background: var(--cor4);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+/* BENEFÍCIOS */
+.beneficios {
+    background: var(--cor2);
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.beneficios h2 {
+    font-size: 36px;
+    margin-bottom: 60px;
+}
+
+.beneficios-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.beneficio-card {
+    background: var(--cor3);
+    padding: 40px;
+    border-radius: 12px;
+    width: 300px;
+    transition: 0.3s;
+}
+
+.beneficio-card:hover {
+    transform: translateY(-10px);
+    background: var(--cor4);
+}
+
+.icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: var(--cor7);
+}
+
+.beneficio-card h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.beneficio-card p {
+    color: #cbd5e1;
+}
+
+/* EVENTO DESTAQUE  */
+.evento-destaque {
+    background: var(--cor2);
+    padding: 100px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.evento-destaque h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.evento-destaque .descricao {
+    color: #d1d5db;
+    margin-bottom: 20px;
+}
+
+/* BOTÃO DO EVENTO  */
+.btn-evento {
+    display: block;
+    width: fit-content;
+    margin: 40px auto 0;
+    background: var(--cor7);
+    color: white;
+    padding: 16px 35px;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(22, 160, 133, 0.3);
+    text-decoration: none;
+}
+
+.btn-evento:hover {
+    transform: translateY(-3px);
+    background: var(--cor6);
+    box-shadow: 0 8px 25px rgba(22, 160, 133, 0.4);
+}
+
+/* FOOTER */
+footer {
+    background: var(--cor2);
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 60px;
+}
+
+.social {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    color: #a1a1aa;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .beneficios-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-evento {
+        margin: 30px auto 0;
+        padding: 14px 30px;
+        font-size: 16px;
+    }
+}

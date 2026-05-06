@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* FUNDO GALÁXIA APRIMORADO */
+body {
+  background: 
+    /* Gradiente galáctico principal */
+    radial-gradient(ellipse at bottom, #1a0033 0%, #000428 50%, #000000 100%),
+    /* Nebulosa roxa/azul */
+    radial-gradient(ellipse at top, #667eea 0%, #764ba2 50%, transparent 70%),
+    /* Estrelas densas */
+    radial-gradient(2px 2px at 20px 30px, #eee, transparent),
+    radial-gradient(2px 2px at 40px 70px, #fff, transparent),
+    radial-gradient(1px 1px at 90px 40px, #fff, transparent),
+    radial-gradient(1px 1px at 130px 80px, #ddd, transparent),
+    /* Fundo preto espacial */
+    #000;
+  background-attachment: fixed;
+  color: #fff;
+  padding: 20px;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Camada escura para contraste (ajustada) */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -2;
+}
+
+/* Estrelas animadas (melhoradas com parallax) */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: 
+    radial-gradient(#ffffff 0.5px, transparent 0.5px),
+    radial-gradient(#ffffff 0.3px, transparent 0.3px);
+  background-size: 50px 50px, 30px 30px;
+  background-position: 0 0, 20px 20px;
+  opacity: 0.4;
+  animation: estrelas 80s linear infinite;
+  z-index: -1;
+}
+
+@keyframes estrelas {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-100px);
+  }
+}
+
+/* Partículas flutuantes cósmicas */
+body::before {
+  background-image: 
+    radial-gradient(1px 1px, #ff00ff, transparent),
+    radial-gradient(1px 1px, #00ffff, transparent);
+  background-position: 100px 200px, 300px 100px, 500px 300px;
+  background-size: 2px 2px;
+  animation: particulas 20s ease-in-out infinite alternate;
+}
+
+@keyframes particulas {
+  0% { transform: translate(0, 0) rotate(0deg); opacity: 0.5; }
+  100% { transform: translate(30px, -30px) rotate(180deg); opacity: 1; }
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  color: #ff00ff;
+  text-shadow:
+    0 0 5px #ff00ff,
+    0 0 10px #ff00ff,
+    0 0 20px #ff00ff,
+    0 0 40px #ff00ff;
+}
+
+header p {
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+/* CARDS */
+.card {
+  background: rgba(0, 0, 0, 0.65);
+  border: 2px solid #ff00ff;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow:
+    0 0 10px #ff00ff,
+    0 0 20px #ff00ff inset,
+    inset 0 0 20px rgba(255, 0, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow:
+    0 0 20px #ff00ff,
+    0 0 40px #ff00ff inset;
+  transform: translateY(-5px);
+}
+
+.card h2 {
+  margin-bottom: 15px;
+  color: #00ffff;
+  text-shadow:
+    0 0 5px #00ffff,
+    0 0 10px #00ffff,
+    0 0 20px #00ffff;
+}
+
+/* ITENS */
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  border-bottom: 1px dashed rgba(255,255,255,0.2);
+  padding-bottom: 5px;
+  transition: all 0.2s;
+}
+
+.item:hover {
+  border-bottom-color: #ff00ff;
+}
+
+.item h3 {
+  font-size: 1rem;
+}
+
+.item span {
+  color: #00ff99;
+  font-weight: bold;
+  text-shadow: 0 0 5px #00ff99;
+}
+
+.item p {
+  width: 100%;
+  font-size: 0.85rem;
+  opacity: 0.8;
+  margin-top: 3px;
+}
+
+/* DESTAQUE (combos) */
+.destaque {
+  border-color: #00ffff;
+  box-shadow:
+    0 0 15px #00ffff,
+    0 0 30px #00ffff inset;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1.2rem;
+  color: #ffcc00;
+  text-shadow: 0 0 10px #ffcc00;
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .item span {
+    margin-top: 5px;
+  }
+}
